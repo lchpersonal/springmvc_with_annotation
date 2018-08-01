@@ -6,6 +6,8 @@ import org.springframework.web.servlet.config.annotation.*;
 /**
  * @Author: chengli
  * @Date: 2018/8/1 14:36
+ * 子容器及webmvc高级功能配置类
+ *
  * 其中@EnableWebMvc注解，是启用springMvc的高级定制功能【视图解析器，handlerMapping等】，相当于配置文件中的<mvc:annotation-driven/>
  * 实现WebMvcConfigurer接口，定制我们的所有高级功能，例如配置视图解析器等。（如果不需要配置，可以不使用该注解）。
  * 这里我们继承的WebMvcConfigurerAdapter是WebMvcConfigurer接口的实现类。

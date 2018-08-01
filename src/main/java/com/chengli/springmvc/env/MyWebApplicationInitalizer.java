@@ -6,6 +6,35 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
  * @Author: chengli
  * @Date: 2018/8/1 13:26
  * springMvc配置类，该类实现了WebApplicationInitializer接口，封装了springMvc的常用配置，把需要自定义的信息暴露给用户。
+ *
+ * 该类，相当于之前web.xml中配置的以下信息：
+ * <pre>
+ *      <web-app>
+ *           <listener>
+ *               <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+ *           </listener>
+ *
+ *           <context-param>
+ *                 <param-name>contextConfigLocation</param-name>
+ *                 <param-value>/WEB-INF/app-context.xml</param-value>
+ *           </context-param>
+ *
+ *           <servlet>
+ *               <servlet-name>app</servlet-name>
+ *               <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+ *               <init-param>
+ *                     <param-name>contextConfigLocation</param-name>
+ *                     <param-value></param-value>
+ *               </init-param>
+ *               <load-on-startup>1</load-on-startup>
+ *          </servlet>
+ *
+ *          <servlet-mapping>
+ *              <servlet-name>app</servlet-name>
+ *               <url-pattern>/app/*</url-pattern>
+ *          </servlet-mapping>
+ * </web-app>
+ * <pre/>
  */
 
 public class MyWebApplicationInitalizer extends AbstractAnnotationConfigDispatcherServletInitializer {
